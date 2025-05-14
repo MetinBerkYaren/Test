@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tuğrul Yadaş</title>
+		<link rel="stylesheet" href="index.css" />
+		<style>
+			@media (max-width: 1036px) {
+				ul {
+					margin-left: 20px;
+				}
+
+				header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+
+				.logo {
+					font-size: 25px;
+				}
+
+				nav {
+					justify-content: center;
+					gap: 10px;
+				}
+
+				.footer-menu {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.footer-column {
+					align-items: center;
+					margin: 10px 0;
+				}
+				.profile-section {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			@media (max-width: 600px) {
+				header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.logo {
+					font-size: 25px;
+				}
+
+				nav {
+					justify-content: center;
+					gap: 10px;
+				}
+				.MenuButon {
+					width: 80px;
+					font-size: 10px;
+				}
+				.intro-text {
+					padding: 15px;
+					font-size: 18px;
+					line-height: 1.4;
+				}
+				.footer-column h3 {
+					font-size: 12px;
+				}
+				footer p {
+					font-size: 10px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<a href="index.html"> <div class="logo">Tuğrul Yadaş</div></a>
+				<nav>
+					<a href="MyProjects.html">
+						<button type="button" class="MenuButon">
+							<b class="translatable" data-en="MYPROJECTS">PROJELERİM</b>
+						</button>
+					</a>
+					<a href="Skills.html">
+						<button type="button" class="MenuButon">
+							<b class="translatable" data-en="SKILLS">YETENEKLERİM</b>
+						</button>
+					</a>
+					<a href="AboutMe.html">
+						<button type="button" class="MenuButon">
+							<b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b>
+						</button>
+					</a>
+					<a href="Contact.html">
+						<button type="button" class="MenuButon">
+							<b class="translatable" data-en="CONTACT">İLETİŞİM</b>
+						</button>
+					</a>
+					<button type="button" onclick="toggleLanguage()" class="LangButton">
+						<b class="translatable" data-en="TR">ENG</b>
+					</button>
+				</nav>
+			</header>
+
+			<main>
+				<div class="profile-section">
+					<div class="profile-pic-wrapper">
+						<img
+							class="profile-pic"
+							src="Images/Profile_Picture.jpeg"
+							alt="Profil Fotoğrafı"
+						/>
+					</div>
+
+					<div class="intro-text" data-en="ENG/TR" class="translatable">
+						<p id="about-paragraph" class="translatable">
+							Yazılım dünyasında her gün yeni bir şey öğrenmenin heyecanıyla
+							ilerliyorum. Disiplinli çalışma alışkanlığım, kendimi sürekli
+							geliştirme isteğimle birleşince ortaya hem sağlam temeller hem de
+							yaratıcı çözümler çıkıyor. Karşılaştığım her problemi bir gelişim
+							fırsatı olarak görüyor, yazılım üretmenin sadece teknik değil,
+							aynı zamanda bir öğrenme ve paylaşma süreci olduğuna inanıyorum.
+							Takım çalışmasına yatkın, çözüm odaklı ve yeniliğe açık bir
+							geliştirici olarak, teknolojiyi fayda üreten projelere dönüştürme
+							yolunda kararlılıkla ilerliyorum.
+						</p>
+					</div>
+					<div id="DAliSection">
+						<h2
+							id="Salvador"
+							class="translatable"
+							data-en="'Intelligence without ambition is a bird without wings.'"
+						>
+							'Hırs olmadan zeka, kanatsız bir kuş gibidir.'
+						</h2>
+						<div>
+							<img id="DaliResim" src="Images/SDali.png" alt="" />
+							<p id="Author">Salvador Dalí</p>
+						</div>
+					</div>
+				</div>
+				<div class="Learning-section">
+					<h2 class="translatable" data-en="Currently Learning">
+						Şu An Öğrendiklerim
+					</h2>
+					<p
+						class="translatable"
+						data-en="I actively focus on the following areas to enhance my skills in the field of software development:"
+					>
+						Yazılım dünyasında kendimi geliştirmek için aktif olarak aşağıdaki
+						alanlara yoğunlaşıyorum:
+					</p>
+					<ul class="skills-list">
+						<li>
+							<span>✔</span>
+							<div
+								class="translatable"
+								data-en="Component-based interface development with React"
+							>
+								React ile component tabanlı arayüz geliştirme
+							</div>
+						</li>
+						<li>
+							<span>✔</span>
+							<div
+								class="translatable"
+								data-en="Server-side programming with Node.js"
+							>
+								Node.js ile sunucu tarafı programlama
+							</div>
+						</li>
+						<li>
+							<span>✔</span>
+							<div
+								class="translatable"
+								data-en="Version control with Git and GitHub"
+							>
+								Git ve GitHub ile sürüm kontrolü
+							</div>
+						</li>
+						<li>
+							<span>✔</span>
+							<div
+								class="translatable"
+								data-en="Online game server management with Unreal Engine"
+							>
+								Unreal Engine ile Online Oyun Sunucu Yönetimi
+							</div>
+						</li>
+					</ul>
+				</div>
+			</main>
+
+			<hr />
+
+			<footer>
+				<div class="footer-menu">
+					<div class="footer-column">
+						<h3>Tuğrul Yadaş</h3>
+						<button onclick="CV()" class="translatable" data-en="Download CV">
+							CV İndir
+						</button>
+
+						<script>
+							function CV() {
+								window.open("CV.pdf", "_blank");
+							}
+						</script>
+					</div>
+					<div class="footer-column">
+						<h3 class="translatable" data-en="Links">Linkler</h3>
+
+						<a
+							class="hoverA"
+							href="https://www.linkedin.com/in/tu%C4%9Frul-yada%C5%9F-958a1029a/"
+							target="_blank"
+						>
+							<img src="Images/LinkedIn_icon.svg" width="20" height="20" />
+							Linkedin
+						</a>
+						<a
+							class="hoverA"
+							href="https://github.com/TugrulYadas"
+							target="_blank"
+						>
+							<img
+								id="github"
+								src="Images/github-mark.svg"
+								width="20"
+								height="20"
+							/>
+							Github
+						</a>
+					</div>
+					<div class="footer-column">
+						<h3 class="translatable" data-en="Contact">İletişim</h3>
+						<div>E-mail: tuyad683@gmail.com</div>
+						<div>
+							<span class="translatable" data-en="Phone Number">Telefon</span>:
+							+90 545 531 39 60
+						</div>
+						<div>
+							<span class="translatable" data-en="Address">Adres</span>:
+							Güzelyalı mah. İzmir/Konak
+						</div>
+					</div>
+				</div>
+				<p>© 2025 Tuğrul Yadaş</p>
+			</footer>
+		</div>
+		<script>
+			let currentLang = "tr";
+			const translations = {
+				"about-paragraph": {
+					tr:
+						"Yazılım dünyasında her gün yeni bir şey öğrenmenin heyecanıyla ilerliyorum. " +
+						"Disiplinli çalışma alışkanlığım, kendimi sürekli geliştirme isteğimle birleşince " +
+						"ortaya hem sağlam temeller hem de yaratıcı çözümler çıkıyor. Karşılaştığım her " +
+						"problemi bir gelişim fırsatı olarak görüyor, yazılım üretmenin sadece teknik değil, " +
+						"aynı zamanda bir öğrenme ve paylaşma süreci olduğuna inanıyorum. Takım çalışmasına " +
+						"yatkın, çözüm odaklı ve yeniliğe açık bir geliştirici olarak, teknolojiyi fayda üreten " +
+						"projelere dönüştürme yolunda kararlılıkla ilerliyorum.",
+
+					en:
+						"I progress in the software world with the excitement of learning something new every day. When my disciplined working habits are combined with my desire to constantly improve myself," +
+						" both solid foundations and creative solutions emerge. I see every problem I encounter as a development opportunity, and I believe that producing software is not only technical, but also a process of learning and sharing." +
+						" As a developer who is prone to teamwork, solution-oriented, and open to innovation, I am determined to transform technology into projects that produce benefits.",
+				},
+				"skills-paragraph": {
+					tr: "Yazılım dillerinde deneyimim var, özellikle JavaScript ve Python üzerinde çalışıyorum.",
+					en: "I have experience in programming languages, especially working with JavaScript and Python.",
+				},
+			};
+
+			function updateTexts(lang) {
+				currentLang = lang;
+				localStorage.setItem("lang", lang);
+
+				document.querySelectorAll(".translatable").forEach((el) => {
+					const id = el.id;
+
+					// Eğer translations nesnesinde varsa, buradaki metni güncelle
+					if (id && translations[id]) {
+						el.textContent = translations[id][lang];
+					} else {
+						// Eğer translations nesnesinde yoksa, data-en kullanarak güncelle
+						if (lang === "en") {
+							const eng = el.getAttribute("data-en");
+							if (eng) el.textContent = eng;
+						} else {
+							const original = el.getAttribute("data-original");
+							if (original) el.textContent = original;
+						}
+					}
+				});
+			}
+
+			function toggleLanguage() {
+				const newLang = currentLang === "tr" ? "en" : "tr";
+				updateTexts(newLang);
+			}
+
+			// Sayfa ilk yüklendiğinde çalışır
+			document.addEventListener("DOMContentLoaded", () => {
+				// İlk olarak Türkçe metinleri yedekle (data-original)
+				document.querySelectorAll(".translatable").forEach((el) => {
+					el.setAttribute("data-original", el.textContent);
+				});
+
+				const savedLang = localStorage.getItem("lang") || "tr";
+				updateTexts(savedLang);
+			});
+		</script>
+	</body>
+</html>

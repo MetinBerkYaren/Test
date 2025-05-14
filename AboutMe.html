@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuğrul Yadaş</title>
+    <link rel="stylesheet" href="AboutMe.css">
+    <style>
+     
+      @media (max-width: 1024px) {
+        ul {
+	margin-left: 20px;
+}
+     
+        header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 10px;
+    
+  }
+        main {
+          flex-direction: column;
+          padding: 20px;
+        }
+        .gallery {
+  display: flex;
+  flex-direction: row; /* Yatay sıralama */
+  gap: 20px;
+  height: auto;
+  width: 100%; /* Container'ın genişliği */
+  overflow-x: auto; /* Yatay kaydırma */
+  overflow-y: hidden; /* Dikey kaydırma engellendi */
+  padding: 20px;
+  border-radius: 16px;
+  background: #f9f9fb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #00bfff #f0f0f0;
+  flex-wrap: nowrap; /* Görsellerin tek satırda sıralanması */
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px; /* Yatay kaydırma çubuğu */
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 10px;
+}
+
+.gallery img {
+  height: 250px; /* Sabit yükseklik */
+  width: 250px; /* Sabit genişlik */
+  object-fit: cover; /* Resmin kutuya uygun şekilde kesilmesi */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 100%; /* Görsellerin genişliği %100'e kadar çıkabilir, ancak sabit kalacak */
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+
+        .footer-menu {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .footer-column {
+          align-items: center;
+          margin: 10px 0;
+        }
+        .info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.info-card {
+  flex: 1 1 180px;
+  max-width: 220px;
+}
+
+      }
+  
+@media (max-width: 600px) {
+  ul {
+	margin-left: 20px;
+}
+
+
+  .logo {
+					font-size: 25px;
+				}
+
+
+  nav {
+    justify-content: center;
+    gap: 10px;
+    
+  }
+     .MenuButon {
+					width: 80px;
+					font-size: 10px;
+				}
+        .info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.info-card {
+  flex: 1 1 180px;
+  max-width: 220px;
+}
+.gallery {
+  display: flex;
+  flex-direction: row; /* Yatay sıralama */
+  gap: 20px;
+  width: 100%; /* Container'ın genişliği */
+  overflow-x: auto; /* Yatay kaydırma */
+  overflow-y: hidden; /* Dikey kaydırma engellendi */
+  padding: 20px;
+  border-radius: 16px;
+  background: #f9f9fb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #00bfff #f0f0f0;
+  flex-wrap: nowrap; /* Görsellerin tek satırda sıralanması */
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px; /* Yatay kaydırma çubuğu */
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 10px;
+}
+
+.gallery img {
+  height: 250px; /* Sabit yükseklik */
+  width: 250px; /* Sabit genişlik */
+  object-fit: cover; /* Resmin kutuya uygun şekilde kesilmesi */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 100%; /* Görsellerin genişliği %100'e kadar çıkabilir, ancak sabit kalacak */
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+
+
+        .about-section h2 {
+          font-size: 1.6rem;
+        }
+        .cv-button {
+          font-size: 0.9rem;
+          padding: 10px 20px;
+        }
+        .gallery-section h3 {
+          font-size: 1.3rem;
+        }
+        .footer-column h3 {
+          font-size: 12px;
+        }
+        footer p {
+          font-size: 10px;
+        }
+      
+      }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"> <div class="logo">Tuğrul Yadaş</div></a>    
+            <nav>
+                <a href="MyProjects.html">
+                    <button type="button" class="MenuButon"><b class="translatable" data-en="MYPROJECTS">PROJELERİM</b></button>
+                </a>
+                <a href="Skills.html">
+                    <button type="button" class="MenuButon"><b class="translatable" data-en="SKILLS">YETENEKLERİM</b></button>
+                </a>
+                <a href="AboutMe.html">
+                    <button type="button" id="AboutMeButton" class="MenuButon"><b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b></button>
+                </a>
+                <a href="Contact.html">
+                    <button type="button" class="MenuButon"><b class="translatable" data-en="CONTACT">İLETİŞİM</b></button>
+                </a>
+               <button type="button" onclick="toggleLanguage()" class="LangButton">
+						<b class="translatable" data-en="TR">ENG</b>
+					</button>
+        
+              </nav>
+              
+          </header>
+        
+          <main class="about-section">
+            <!-- Başlık -->
+            
+              
+           
+            <!-- Bilgi Kartları -->
+          <div class="info-grid">
+
+            <div class="info-card">
+              <strong class="translatable" data-en="Name:">İsim:</strong> Tuğrul Yadaş
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="Birth Date:">Doğum Tarihi:</strong> 09-06-2004
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="Age:">Yaş:</strong> 21
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="Place of Birth:">Doğum Yeri:</strong> İzmir/Aliağa
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="Address:">Adres:</strong> Güzelyalı Konak İzmir
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="High School:">Lise:</strong> <span class="translatable" data-en="Çanakkale İbrahim Bodur Anatolian High School">Çanakkale İbrahim Bodur Anadolu Lisesi</span>
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="University:">Üniversite:</strong> <span class="translatable" data-en="Izmir University Of Economics">İzmir Ekonomi Üniversitesi</span>
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="Department:">Bölüm:</strong> <span class="translatable" data-en="Computer Programming">Bilgisayar Programcılığı</span>
+            </div>
+            <div class="info-card">
+              <strong class="translatable" data-en="Driver's License:">Ehliyet:</strong> <span class="translatable" data-en="B (Active Driver)">B(Aktif Kullanıyorum)</span>
+            </div>
+
+             
+          </div>
+          
+            <!-- CV Butonu -->
+            <div class="cv-container" >
+              <a href="cv.pdf" class="cv-button" target="_blank"  download><span class="translatable" data-en="View My CV 📄 ">📄 CV'yi Görüntüle</span></a>
+            </div>
+            <div class="aboutme-container">
+            <p><span class="translatable" data-en="I am " data-tr="Ben">Ben</span> <strong>Tuğrul Yadaş.</strong> <span class="translatable" id="aboutme-paragraph"> Ekonomi Üniversitesi'nde ikinci sınıf 
+              Bilgisayar Programcılığı öğrencisiyim. Lise yıllarımdan 
+              beri yazılıma büyük bir ilgim var ve olabildiğince fazla 
+              deneyim kazanmaya çalıştım. Bu alana olan ilgim oldukça 
+              derin ve yeni programlama dilleri öğrenmeye ve kendimi 
+              sürekli geliştirmeye büyük bir tutku duyuyorum.</span>
+            </p>
+              <br>
+            <h2 style="color: #ffffff;" class="translatable" data-en="My Experiences">Tecrübelerim</h2>
+            <p>
+              <ul>
+                <li><h3 style="display: inline-block; color: #ffffff;" class="translatable" data-en="Electrical Installation">Elektirik Tesisatı</h3><strong>- </strong> <i class="translatable" data-en="June 2018 - August 2018">Haziran 2018- Ağustos 2018</i><br>
+                  <p class="translatable" id="elec"> Bir binanın elektrik sisteminin genel çalışma prensiplerini, bağlantı düzenlerini ve kablolama yöntemlerini baştan sona öğrendim. 
+                    Konut tipi yapılarda priz, anahtar,sigorta kutusu gibi bağlantı noktalarını tanımlayabiliyor;
+                      meydana gelen arızaları tespit edip çözüm üretebiliyorum.</p>
+                </li>
+                <br>
+                <li> <h3 style="display: inline-block; color: #ffffff;" class="translatable" data-en="Website Managment">Web Sitesi Yönetimi</h3><strong>- </strong> <i class="translatable" data-en="July 2024 - September 2024">Temmuz 2024 - Eylül 2024</i><br>
+                        <p class="translatable" id="web"> Kendi alanımla ilgili ilk freelance projemde, bir öğrenci yurdunun tanıtım ve bilgilendirme amaçlı web 
+                        sitesini tasarladım. Kullanıcı dostu arayüz, mobil uyumluluk ve temel içerik yönetimi özellikleriyle 
+                       modern bir site oluşturdum. Proje sürecinde müşteri iletişimi, ihtiyaç analizi ve teslim sonrası destek
+                       konularında da aktif rol aldım.</p>
+                </li> 
+                <br>
+                <li>  <h3 style="display: inline-block; color: #ffffff;" class="translatable" data-en="Consulting Services">Danışmanlık Hizmetleri</h3>
+<strong>- </strong> <i class="translatable" data-en="June 2017 - July 2021">Haziran 2017 - Temmuz 2021</i>
+ 
+                <br>
+                              <p class="translatable" id="consulting"> Bir hasar danışmanlık ofisinde, kaza geçirmiş bireylerin tazminat alma süreçlerinde uzman olarak görev aldım. 
+                                Müşterilerin hak ettikleri tazminatları alabilmesi için gerekli belgelerin toplanması, 
+                                başvuruların yapılması ve sürecin takibi konularında çalıştım. İşleyişi baştan sona öğrendim, 
+                                tüm süreçlere hâkimim ve çözüm odaklı yaklaşımım sayesinde verimli bir şekilde sonuç aldım.</p>
+                </li>
+                <br>
+                <li><h3 style="display: inline-block; color: #ffffff;" class="translatable" data-en="Game Developer">Oyun Geliştirici</h3>
+                <strong>- </strong> <i class="translatable" data-en="April 2022 - June 2024">Nisan 2022 - Haziran 2024</i><br>
+
+                                    <p class="translatable" id="game"> Kendi ekibimle birlikte oyun geliştirme süreçlerinde aktif olarak yer aldım. Bu süreçte önemli bir deneyim kazandım.
+                                       Takım çalışması, yaratıcı problem çözme ve projelerin geliştirilmesi gibi alanlarda büyük bir katkı sağladım. Bu deneyimim, 
+                                       hem kişisel gelişimime hem de teknik bilgi birikimime önemli ölçüde katkıda bulundu.</p>
+                </li>
+              </ul>
+            </p>
+              <br>
+            <p>
+              <h2 style="color: #ffffff;" class="translatable" data-en="My Volunteer Projects">Gönüllülük Projelerim</h2>
+            </p> 
+            <p><ul><li><h3 style="display: inline-block; color: #ffffff;" class="translatable" data-en="Mentor - Izmir University of Economics">Mentör – İzmir Ekonomi Üniversitesi</h3><strong>- </strong> <i class="translatable" data-en="September 2024 – January 2025">Eylül 2024 – Ocak 2025</i><br>
+
+                                    <p class="translatable" id="mentor"> 
+              Bireysel mentee ihtiyaçlarına göre uyarlanmış mentorluk tarzı, herkese uygun yaklaştım.
+              Mentee ilerlemesine yardımcı geri bildirimde bulundum, becerilerini geliştirmelerine ve potansiyellerini artırmalarına odaklandım.
+              Mentee performansını, kişiselleştirilmiş rehberlik ve destek sağlayarak artırdım.
+              Zorluklar karşısında başarı odaklı, rehberlik yapıtım ve başa çıkma mekanizmaları önerdim.</p></li></ul></p>
+            </div>
+          
+            <!-- Galeri -->
+            <div class="gallery-section">
+              
+              <div class="gallery">
+                <img src="Images/1.jpeg" alt="Galeri Fotoğrafı 1">
+                <img src="Images/2.jpeg" alt="Galeri Fotoğrafı 2">
+                <img src="Images/3.jpeg" alt="Galeri Fotoğrafı 3">
+                <img src="Images/5.jpeg" alt="Galeri Fotoğrafı 3">
+                <img src="Images/4.jpeg" alt="Galeri Fotoğrafı 3">
+                 <img src="Images/6.jpeg" alt="Galeri Fotoğrafı 1">
+                
+                <img src="Images/8.jpeg" alt="Galeri Fotoğrafı 3">
+                <img src="Images/9.jpeg" alt="Galeri Fotoğrafı 3">
+                </div>
+            </div>
+          </main>
+          
+          
+          <hr>
+         	<footer>
+				<div class="footer-menu">
+					<div class="footer-column">
+						<h3>Tuğrul Yadaş</h3>
+						<button onclick="CV()" class="translatable" data-en="Download CV">
+							CV İndir
+						</button>
+
+						<script>
+							function CV() {
+								window.open("CV.pdf", "_blank");
+							}
+						</script>
+					</div>
+					<div class="footer-column">
+						<h3 class="translatable" data-en="Links">Linkler</h3>
+
+						<a
+							class="hoverA"
+							href="https://www.linkedin.com/in/tu%C4%9Frul-yada%C5%9F-958a1029a/"
+							target="_blank"
+						>
+							<img src="Images/LinkedIn_icon.svg" width="20" height="20" />
+							Linkedin
+						</a>
+						<a
+							class="hoverA"
+							href="https://github.com/TugrulYadas"
+							target="_blank"
+						>
+							<img
+								id="github"
+								src="Images/github-mark.svg"
+								width="20"
+								height="20"
+							/>
+							Github
+						</a>
+					</div>
+					<div class="footer-column">
+						<h3 class="translatable" data-en="Contact">İletişim</h3>
+						<div>E-mail: tuyad683@gmail.com</div>
+						<div>
+							<span class="translatable" data-en="Phone Number">Telefon</span>:
+							+90 545 531 39 60
+						</div>
+						<div>
+							<span class="translatable" data-en="Address">Adres</span>:
+							Güzelyalı mah. İzmir/Konak
+						</div>
+					</div>
+				</div>
+				<p>© 2025 Tuğrul Yadaş</p>
+			</footer>
+          
+    </div>
+    <script>
+			// Geçerli dili sakla
+			let currentLang = "tr";
+			const translations = {
+				"aboutme-paragraph": {
+         tr:" Ekonomi Üniversitesi'nde ikinci sınıf" +
+              "Bilgisayar Programcılığı öğrencisiyim. Lise yıllarımdan "+
+              "beri yazılıma büyük bir ilgim var ve olabildiğince fazla" +
+              "deneyim kazanmaya çalıştım. Bu alana olan ilgim oldukça" +
+              "derin ve yeni programlama dilleri öğrenmeye ve kendimi"+
+              "sürekli geliştirmeye büyük bir tutku duyuyorum.",
+          en:
+      "I am a second-year Computer Programming student at Ekonomi University. I have had a great interest in software since my high school years and have tried to gain as much experience as possible. My passion for this field is quite deep, and I am very enthusiastic about learning new programming languages and continuously improving myself.",
+         
+        },
+        "elec":{
+          tr:"Bir binanın elektrik sisteminin genel çalışma prensiplerini, bağlantı düzenlerini ve kablolama yöntemlerini baştan sona öğrendim."+ 
+                    +"Konut tipi yapılarda priz, anahtar,sigorta kutusu gibi bağlantı noktalarını tanımlayabiliyor;"+
+                    +" meydana gelen arızaları tespit edip çözüm üretebiliyorum.",
+          en:"I have learned the general operating principles, connection layouts, and wiring methods of an electrical system in a building from start to finish. In residential buildings, I can identify connection points such as outlets, switches, and fuse boxes; I am also capable of diagnosing and solving any issues that arise."
+        },
+        "web":{
+            tr:"Kendi alanımla ilgili ilk freelance projemde, bir öğrenci yurdunun tanıtım ve bilgilendirme amaçlı web" +
+                        "sitesini tasarladım. Kullanıcı dostu arayüz, mobil uyumluluk ve temel içerik yönetimi özellikleriyle" +
+                       "modern bir site oluşturdum. Proje sürecinde müşteri iletişimi, ihtiyaç analizi ve teslim sonrası destek"+
+                       "konularında da aktif rol aldım.", 
+          en:"In my first freelance project related to my field, I designed a website for a student dormitory aimed at promotion and information. I created a modern site with a user-friendly interface, mobile compatibility, and basic content management features. During the project process, I also played an active role in customer communication, needs analysis, and post-delivery support."
+        },
+        "consulting":{
+            tr:"Bir hasar danışmanlık ofisinde, kaza geçirmiş bireylerin tazminat alma süreçlerinde uzman olarak görev aldım."+ 
+                                "Müşterilerin hak ettikleri tazminatları alabilmesi için gerekli belgelerin toplanması,"+ 
+                                "başvuruların yapılması ve sürecin takibi konularında çalıştım. İşleyişi baştan sona öğrendim,"+ 
+                                "tüm süreçlere hâkimim ve çözüm odaklı yaklaşımım sayesinde verimli bir şekilde sonuç aldım.", 
+          en:"I worked as a specialist in a damage consultancy office, assisting individuals who had experienced accidents with their compensation claims. I was involved in gathering the necessary documents, making applications, and tracking the process to ensure clients received the compensation they were entitled to. I learned the entire workflow from start to finish, I am familiar with all processes, and thanks to my solution-oriented approach, I achieved efficient results."
+        },
+        "game":{
+            tr:"Kendi ekibimle birlikte oyun geliştirme süreçlerinde aktif olarak yer aldım. Bu süreçte önemli bir deneyim kazandım."+
+                                       "Takım çalışması, yaratıcı problem çözme ve projelerin geliştirilmesi gibi alanlarda büyük bir katkı sağladım. Bu deneyimim,"+
+                                       "hem kişisel gelişimime hem de teknik bilgi birikimime önemli ölçüde katkıda bulundu.", 
+          en:"I actively participated in the game development processes with my own team. During this time, I gained significant experience. I made substantial contributions in areas such as teamwork, creative problem-solving, and project development. This experience greatly contributed to both my personal growth and technical knowledge."
+        },
+        "mentor":{
+            tr:"Bireysel mentee ihtiyaçlarına göre uyarlanmış mentorluk tarzı, herkese uygun yaklaştım."+
+              "Mentee ilerlemesine yardımcı geri bildirimde bulundum, becerilerini geliştirmelerine ve potansiyellerini artırmalarına odaklandım."+
+              "Mentee performansını, kişiselleştirilmiş rehberlik ve destek sağlayarak artırdım."+
+              "Zorluklar karşısında başarı odaklı, rehberlik yapıtım ve başa çıkma mekanizmaları önerdim.", 
+          en:"I adapted my mentoring style to meet the individual needs of each mentee, taking an approach that suited everyone. I provided feedback to help mentees progress, focusing on developing their skills and enhancing their potential. I improved mentee performance by offering personalized guidance and support. In the face of challenges, I provided success-focused mentorship and suggested coping mechanisms."
+        }        
+				
+			};
+
+			function updateTexts(lang) {
+				currentLang = lang;
+				localStorage.setItem("lang", lang);
+
+				document.querySelectorAll(".translatable").forEach((el) => {
+					const id = el.id;
+
+					// Eğer translations nesnesinde varsa, buradaki metni güncelle
+					if (id && translations[id]) {
+						el.textContent = translations[id][lang];
+					} else {
+						// Eğer translations nesnesinde yoksa, data-en kullanarak güncelle
+						if (lang === "en") {
+							const eng = el.getAttribute("data-en");
+							if (eng) el.textContent = eng;
+						} else {
+							const original = el.getAttribute("data-original");
+							if (original) el.textContent = original;
+						}
+					}
+				});
+			}
+
+			function toggleLanguage() {
+				const newLang = currentLang === "tr" ? "en" : "tr";
+				updateTexts(newLang);
+			}
+
+			// Sayfa ilk yüklendiğinde çalışır
+			document.addEventListener("DOMContentLoaded", () => {
+				// İlk olarak Türkçe metinleri yedekle (data-original)
+				document.querySelectorAll(".translatable").forEach((el) => {
+					el.setAttribute("data-original", el.textContent);
+				});
+
+				const savedLang = localStorage.getItem("lang") || "tr";
+				updateTexts(savedLang);
+			});
+		</script>
+  </body>
+</html>

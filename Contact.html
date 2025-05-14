@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tuğrul Yadaş</title>
+		<link rel="stylesheet" href="Contact.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+
+		<style>
+			@media (max-width: 1024px) {
+				ul {
+					margin-left: 20px;
+				}
+
+				header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+
+				.logo {
+					font-size: 28px;
+				}
+
+				nav {
+					justify-content: center;
+					gap: 10px;
+				}
+
+				.footer-menu {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.footer-column {
+					align-items: center;
+					margin: 10px 0;
+				}
+			}
+			@media screen {
+				ul {
+					margin-left: 20px;
+				}
+
+				header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+
+				.logo {
+					font-size: 22px;
+				}
+
+				nav {
+					justify-content: center;
+					gap: 10px;
+				}
+
+				.footer-menu {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.footer-column {
+					align-items: center;
+					margin: 10px 0;
+				}
+			}
+			@media (max-width: 500px) {
+				header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.logo {
+					font-size: 25px;
+				}
+
+				nav {
+					justify-content: center;
+					gap: 10px;
+				}
+				.MenuButon {
+					width: 80px;
+					font-size: 10px;
+				}
+				main {
+					flex-direction: column;
+					padding: 10px 30px;
+				}
+
+				.mailPage {
+					width: 100%;
+					height: 500px;
+				}
+				.info-item {
+					font-size: 20px;
+					margin: 0px;
+					margin-top: 6px;
+					margin-bottom: 5px;
+					display: inline-block;
+					color: #d9d9d9;
+					background-color: #222;
+					border: 2px solid #d9d9d9;
+					border-radius: 5px;
+					width: 250px;
+				}
+
+				.infolink {
+					display: inline-block;
+					width: 250px;
+				}
+				.mailPage {
+					width: 100%;
+					padding: 0;
+				}
+				.contact-form {
+					width: 100%;
+				}
+				.footer-column h3 {
+					font-size: 12px;
+				}
+				footer p {
+					font-size: 10px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<a href="index.html"> <div class="logo">Tuğrul Yadaş</div></a>
+				<nav>
+					<a href="MyProjects.html">
+						<button type="button" class="MenuButon">
+							<b class="translatable" data-en="MYPROJECTS">PROJELERİM</b>
+						</button>
+					</a>
+					<a href="Skills.html">
+						<button type="button" class="MenuButon">
+							<b class="translatable" data-en="SKILLS">YETENEKLERİM</b>
+						</button>
+					</a>
+					<a href="AboutMe.html">
+						<button type="button" id="AboutMeButton" class="MenuButon">
+							<b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b>
+						</button>
+					</a>
+					<a href="Contact.html">
+						<button type="button" id="CurrentPage" class="MenuButon">
+							<b class="translatable" data-en="CONTACT">İLETİŞİM</b>
+						</button>
+					</a>
+					<button type="button" onclick="toggleLanguage()" class="LangButton">
+						<b class="translatable" data-en="TR">ENG</b>
+					</button>
+				</nav>
+			</header>
+			<main>
+				<div class="informations">
+					<div class="info-item">
+						<i class="fas fa-phone-alt"></i>
+						<span>+90 545 531 39 60</span>
+					</div>
+
+					<div class="info-item">
+						<i class="fas fa-envelope"></i>
+						<span>tuyad683@gmail.com</span>
+					</div>
+
+					<div class="info-item">
+						<i class="fas fa-map-marker-alt"></i>
+						<span>İzmir, Türkiye</span>
+					</div>
+
+					<a
+						href="https://www.linkedin.com/in/tu%C4%9Frul-yada%C5%9F-958a1029a/"
+						target="_blank"
+					>
+						<div id="linkden" class="infolink">
+							<i class="fab fa-linkedin"></i>
+							LinkedIn
+						</div>
+					</a>
+
+					<a href="#" target="_blank">
+						<!--assadddddddddsa -->
+						<div id="github" class="infolink">
+							<i class="fab fa-github"></i>
+							GitHub
+						</div>
+					</a>
+
+					<a href="https://www.instagram.com/tugrulyadas/" target="_blank">
+						<div id="insta" class="infolink">
+							<i class="fab fa-instagram"></i>
+							Instagram
+						</div>
+					</a>
+				</div>
+
+				<div class="mailPage">
+					<form
+						class="contact-form"
+						action="https://formspree.io/f/xgvkzywa"
+						method="POST"
+						id="contactForm"
+						onsubmit="handleSubmit(event)"
+					>
+						<textarea
+							name="name"
+							id="name"
+							placeholder="Adınız"
+							required
+						></textarea>
+						<textarea
+							name="email"
+							id="mail"
+							placeholder="E-posta Adresiniz"
+							required
+						></textarea>
+						<textarea
+							name="message"
+							id="text"
+							placeholder="Mesajınız"
+							required
+						></textarea>
+						<button type="submit" class="translatable" data-en="Submit">
+							Gönder
+						</button>
+					</form>
+
+					<script>
+						function handleSubmit(event) {
+							// Formun varsayılan submit işlemini engelliyoruz
+							event.preventDefault();
+
+							// Formun gönderilmesi için Formspree ile işleme geçiyoruz
+							fetch("https://formspree.io/f/xgvkzywa", {
+								method: "POST",
+								headers: {
+									Accept: "application/json",
+								},
+								body: new FormData(event.target),
+							})
+								.then((response) => {
+									if (response.ok) {
+										alert("Formunuz başarıyla gönderildi. Teşekkür ederiz!");
+										event.target.reset(); // Formu sıfırlıyoruz
+									} else {
+										alert(
+											"Bir hata oluştu, lütfen mailinizin doğruluğunu kontrol edip tekrar deneyin."
+										);
+									}
+								})
+								.catch((error) => {
+									console.error("Form gönderme hatası:", error);
+									alert(
+										"Bir hata oluştu, lütfen mailinizin doğruluğunu kontrol edip tekrar deneyin."
+									);
+								});
+						}
+					</script>
+				</div>
+			</main>
+			<hr />
+			<footer>
+				<div class="footer-menu">
+					<div class="footer-column">
+						<h3>Tuğrul Yadaş</h3>
+						<button onclick="CV()" class="translatable" data-en="Download CV">
+							CV İndir
+						</button>
+
+						<script>
+							function CV() {
+								window.open("CV.pdf", "_blank");
+							}
+						</script>
+					</div>
+					<div class="footer-column">
+						<h3 class="translatable" data-en="Links">Linkler</h3>
+
+						<a
+							class="hoverA"
+							href="https://www.linkedin.com/in/tu%C4%9Frul-yada%C5%9F-958a1029a/"
+							target="_blank"
+						>
+							<img src="Images/LinkedIn_icon.svg" width="20" height="20" />
+							Linkedin
+						</a>
+						<a
+							class="hoverA"
+							href="https://github.com/TugrulYadas"
+							target="_blank"
+						>
+							<img
+								id="github"
+								src="Images/github-mark.svg"
+								width="20"
+								height="20"
+							/>
+							Github
+						</a>
+					</div>
+					<div class="footer-column">
+						<h3 class="translatable" data-en="Contact">İletişim</h3>
+						<div>E-mail: tuyad683@gmail.com</div>
+						<div>
+							<span class="translatable" data-en="Phone Number">Telefon</span>:
+							+90 545 531 39 60
+						</div>
+						<div>
+							<span class="translatable" data-en="Address">Adres</span>:
+							Güzelyalı mah. İzmir/Konak
+						</div>
+					</div>
+				</div>
+				<p>© 2025 Tuğrul Yadaş</p>
+			</footer>
+		</div>
+		<script>
+			// Geçerli dili sakla
+			let currentLang = "tr";
+			const translations = {
+				name: {
+					tr: "Adınız",
+					en: "Your Name",
+				},
+				mail: {
+					tr: "E-posta Adresiniz",
+					en: "Your Email Address",
+				},
+				text: {
+					tr: "Mesajınız",
+					en: "Your Message",
+				},
+				"about-paragraph": {
+					tr:
+						"Yazılım dünyasında her gün yeni bir şey öğrenmenin heyecanıyla ilerliyorum. " +
+						"Disiplinli çalışma alışkanlığım, kendimi sürekli geliştirme isteğimle birleşince " +
+						"ortaya hem sağlam temeller hem de yaratıcı çözümler çıkıyor. Karşılaştığım her " +
+						"problemi bir gelişim fırsatı olarak görüyor, yazılım üretmenin sadece teknik değil, " +
+						"aynı zamanda bir öğrenme ve paylaşma süreci olduğuna inanıyorum. Takım çalışmasına " +
+						"yatkın, çözüm odaklı ve yeniliğe açık bir geliştirici olarak, teknolojiyi fayda üreten " +
+						"projelere dönüştürme yolunda kararlılıkla ilerliyorum.",
+					en:
+						"I progress in the software world with the excitement of learning something new every day. When my disciplined working habits are combined with my desire to constantly improve myself," +
+						" both solid foundations and creative solutions emerge. I see every problem I encounter as a development opportunity, and I believe that producing software is not only technical, but also a process of learning and sharing." +
+						" As a developer who is prone to teamwork, solution-oriented, and open to innovation, I am determined to transform technology into projects that produce benefits.",
+				},
+				"skills-paragraph": {
+					tr: "Yazılım dillerinde deneyimim var, özellikle JavaScript ve Python üzerinde çalışıyorum.",
+					en: "I have experience in programming languages, especially working with JavaScript and Python.",
+				},
+			};
+
+			function updateTexts(lang) {
+				currentLang = lang;
+				localStorage.setItem("lang", lang);
+
+				// Dil değiştirildiğinde metinleri güncelle
+				document.querySelectorAll(".translatable").forEach((el) => {
+					const id = el.id;
+
+					if (id && translations[id]) {
+						el.textContent = translations[id][lang];
+					} else {
+						if (lang === "en") {
+							const eng = el.getAttribute("data-en");
+							if (eng) el.textContent = eng;
+						} else {
+							const original = el.getAttribute("data-original");
+							if (original) el.textContent = original;
+						}
+					}
+				});
+
+				// textarea'ların placeholder metinlerini güncelle
+				document.querySelectorAll("textarea").forEach((el) => {
+					const id = el.id;
+
+					if (id && translations[id]) {
+						el.setAttribute("placeholder", translations[id][lang]);
+					}
+				});
+			}
+
+			function toggleLanguage() {
+				const newLang = currentLang === "tr" ? "en" : "tr";
+				updateTexts(newLang);
+			}
+
+			// Sayfa ilk yüklendiğinde çalışır
+			document.addEventListener("DOMContentLoaded", () => {
+				// İlk olarak Türkçe metinleri yedekle (data-original)
+				document.querySelectorAll(".translatable").forEach((el) => {
+					el.setAttribute("data-original", el.textContent);
+				});
+
+				const savedLang = localStorage.getItem("lang") || "tr";
+				updateTexts(savedLang);
+			});
+		</script>
+	</body>
+</html>
