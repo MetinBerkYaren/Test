@@ -147,9 +147,7 @@ nav {
 	box-shadow: 0 0 5px #0096e0;
 	border-radius: 2px; /* daha yumuşak görünüm */
 }
-#CurrentPage:hover {
-	transform: translateX(0px);
-}
+
 /* -------------------Main---------------------------------- */
 
 main {

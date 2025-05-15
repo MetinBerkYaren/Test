@@ -8,6 +8,12 @@
     <style>
      
       @media (max-width: 1024px) {
+        .cv-button {
+
+	padding: 14px 28px;
+	
+	min-width: 190px;
+}
         html, body {
   					overflow-x: hidden;
 		 			 width: 100%;
@@ -124,7 +130,9 @@
 					height: 100%;
 					margin: 0;
 					}
-
+#CurrentPage {
+					font-size: 10px;
+				}
 				* {
   					box-sizing: border-box;
 					margin: 0;
@@ -153,12 +161,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
+   align-items: center;
+  justify-content: center;
 }
 
 .info-card {
   flex: 1 1 180px;
   max-width: 220px;
+ 
 }
 .gallery {
   display: flex;
@@ -232,12 +242,25 @@
 					text-align: center;
 				}
 				.LangButton {
-					min-width: 1px;
-					width: 50px;
-					font-size: 10px;
-					height: 20px;
-					padding: 5px;
-					background: linear-gradient(to right, #007bffd0, #00c8ffd4);
+					position: fixed; /* Sabitleme */
+					top: 20px; /* Üstten boşluk */
+					right: 0px; /* Sağdan boşluk */
+					z-index: 9999; /* Her şeyin üstünde */
+
+					background: linear-gradient(to right, #007bff, #00c6ff);
+					color: #ffffff;
+					border: none;
+					border-radius: 25px;
+					font-size: 12px;
+					font-family: "Arial", sans-serif;
+					font-weight: 500;
+					text-align: center;
+					padding: 8px 20px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+					cursor: pointer;
+					transition: all 0.3s ease;
+					display: inline-block;
+					min-width: 70px;
 				}
         .about-section {
 					padding-top: 60px;
