@@ -300,7 +300,11 @@ main {
 	text-align: center;
 	margin-bottom: 30px;
 }
-
+.Learning-section img {
+	height: 20px;
+	object-fit: contain;
+	max-width: 100%;
+}
 .skills-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -330,13 +334,6 @@ main {
 	transform: translateY(-5px);
 	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 	background-color: #272727; /* Hoverda arka plan rengini koyulaştırdım */
-}
-
-.tik {
-	color: #2ecc70;
-	font-weight: bold;
-	margin-right: 8px;
-	font-size: 22px;
 }
 
 /* Additional Style for Responsive Design */
