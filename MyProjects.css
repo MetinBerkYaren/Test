@@ -40,7 +40,7 @@ header {
 .logo {
 	font-size: 50px;
 	color: #0096e0;
-	font-family: fantasy;
+	font-family: "Playpen Sans Thai", cursive;
 	transition: color 0.3s ease;
 	text-shadow: 0px 0px 10px #0095e091;
 }
@@ -99,6 +99,7 @@ nav {
 .MenuButon:active::after {
 	width: 100%;
 }
+
 .LangButton {
 	background: linear-gradient(to right, #007bff, #00c6ff);
 	color: #ffffff;
@@ -126,6 +127,31 @@ nav {
 .LangButton:active {
 	background: linear-gradient(to right, #0056b3, #0088cc);
 	transform: scale(0.98);
+}
+#CurrentPage {
+	position: relative;
+	border: none;
+	background-color: transparent;
+	color: #0096e0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+
+	cursor: pointer;
+}
+
+#CurrentPage::after {
+	content: "";
+	position: absolute;
+	bottom: 8px; /* tam alta yasla */
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #0096e0;
+	box-shadow: 0 0 5px #0096e0;
+	border-radius: 2px; /* daha yumuşak görünüm */
+}
+#CurrentPage:hover {
+	transform: translateX(0px);
 }
 
 /* -------------------Main---------------------------------- */

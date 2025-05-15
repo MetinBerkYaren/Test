@@ -40,7 +40,7 @@ header {
 .logo {
 	font-size: 50px;
 	color: #0096e0;
-	font-family: fantasy;
+	font-family: "Playpen Sans Thai", cursive;
 	transition: color 0.3s ease;
 	text-shadow: 0px 0px 10px #0095e091;
 }
@@ -332,8 +332,8 @@ main {
 	background-color: #272727; /* Hoverda arka plan rengini koyulaştırdım */
 }
 
-.skills-list span {
-	color: #2ecc71; /* Yeşil renk değiştirildi */
+.tik {
+	color: #2ecc71;
 	font-weight: bold;
 	margin-right: 8px;
 	font-size: 22px;
