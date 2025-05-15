@@ -5,32 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tuğrul Yadaş</title>
     <link rel="stylesheet" href="AboutMe.css">
-	<meta name="theme-color" content="#141414" />
     <style>
      
       @media (max-width: 1024px) {
-       html,body {
-		overflow-x: hidden;
-		width: 100%;
-		height: 100%;
-		margin: 0;
-				}
+        html, body {
+  					overflow-x: hidden;
+		 			 width: 100%;
+					height: 100%;
+					margin: 0;
+					}
 
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-				}
-	      ul {
+				* {
+  					box-sizing: border-box;
+					margin: 0;
+					padding: 0;
+				   }
+        ul {
 	margin-left: 20px;
 }
      
-        header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-  }
+   
 
   .logo {
     font-size: 36px;
@@ -114,21 +108,29 @@
 }
 
       }
-  
+  @media (max-width: 800px) {
+				#head-container {
+					flex-direction: column;
+					justify-content: flex-end;
+					align-items: center;
+					gap: 0px;
+					padding-top: 25px;
+				}
+			}
 @media (max-width: 600px) {
-   html,body {
-		overflow-x: hidden;
-		width: 100%;
-		height: 100%;
-		margin: 0;
-				}
+  html, body {
+  					overflow-x: hidden;
+		 			 width: 100%;
+					height: 100%;
+					margin: 0;
+					}
 
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-				}
-	ul {
+				* {
+  					box-sizing: border-box;
+					margin: 0;
+					padding: 0;
+				   }
+  ul {
 	margin-left: 20px;
 }
 
@@ -223,42 +225,68 @@
         }
       
       }
+@media (max-width: 500px) {
+				header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.LangButton {
+					min-width: 1px;
+					width: 50px;
+					font-size: 10px;
+					height: 20px;
+					padding: 5px;
+					background: linear-gradient(to right, #007bffd0, #00c8ffd4);
+				}
+        .about-section {
+					padding-top: 60px;
+				}
+			}
     </style>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <a href="index.html"> <div class="logo">Tuğrul Yadaş</div></a>    
-            <nav>
-                <a href="MyProjects.html">
-                    <button type="button" class="MenuButon"><b class="translatable" data-en="MYPROJECTS">PROJELERİM</b></button>
-                </a>
-                <a href="Skills.html">
-                    <button type="button" class="MenuButon"><b class="translatable" data-en="SKILLS">YETENEKLERİM</b></button>
-                </a>
-                <a href="AboutMe.html">
-                    <button type="button" id="AboutMeButton" class="MenuButon"><b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b></button>
-                </a>
-                <a href="Contact.html">
-                    <button type="button" class="MenuButon"><b class="translatable" data-en="CONTACT">İLETİŞİM</b></button>
-                </a>
-               <button type="button" onclick="toggleLanguage()" class="LangButton">
-						<b class="translatable" data-en="TR">ENG</b>
-					</button>
-        
-              </nav>
-              
-          </header>
+       <header>
+				<div id="head-container">
+					<a href="index.html"> <div class="logo">TuğrulYadaş</div></a>
+					<nav>
+						<a href="MyProjects.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="MYPROJECTS">PROJELERİM</b>
+							</button>
+						</a>
+						<a href="Skills.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="SKILLS">YETENEKLERİM</b>
+							</button>
+						</a>
+						<a href="AboutMe.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b>
+							</button>
+						</a>
+						<a href="Contact.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="CONTACT">İLETİŞİM</b>
+							</button>
+						</a>
+					</nav>
+				</div>
+				<button type="button" onclick="toggleLanguage()" class="LangButton">
+					<b class="translatable" data-en="TR">ENG</b>
+				</button>
+			</header>
         
           <main class="about-section">
             <!-- Başlık -->
             
               
-           
+            
             <!-- Bilgi Kartları -->
           <div class="info-grid">
-
+<a href="cv.pdf" class="cv-button" target="_blank"  download><span class="translatable" data-en="View My CV 📄 ">📄 CV'yi Görüntüle</span></a>
             <div class="info-card">
               <strong class="translatable" data-en="Name:">İsim:</strong> Tuğrul Yadaş
             </div>
@@ -290,10 +318,7 @@
              
           </div>
           
-            <!-- CV Butonu -->
-            <div class="cv-container" >
-              <a href="cv.pdf" class="cv-button" target="_blank"  download><span class="translatable" data-en="View My CV 📄 ">📄 CV'yi Görüntüle</span></a>
-            </div>
+          
             <div class="aboutme-container">
             <p><span class="translatable" data-en="I am " data-tr="Ben">Ben</span> <strong>Tuğrul Yadaş.</strong> <span class="translatable" id="aboutme-paragraph"> Ekonomi Üniversitesi'nde ikinci sınıf 
               Bilgisayar Programcılığı öğrencisiyim. Lise yıllarımdan 

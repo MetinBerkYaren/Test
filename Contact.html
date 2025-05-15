@@ -9,29 +9,24 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 		/>
-		<meta name="theme-color" content="#141414" />
+
 		<style>
 			@media (max-width: 1024px) {
-				 html,body {
-		overflow-x: hidden;
-		width: 100%;
-		height: 100%;
-		margin: 0;
+				html,
+				body {
+					overflow-x: hidden;
+					width: 100%;
+					height: 100%;
+					margin: 0;
 				}
 
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
+				* {
+					box-sizing: border-box;
+					margin: 0;
+					padding: 0;
 				}
 				ul {
 					margin-left: 20px;
-				}
-
-				header {
-					flex-direction: column;
-					align-items: center;
-					text-align: center;
 				}
 
 				.logo {
@@ -53,27 +48,31 @@
 					margin: 10px 0;
 				}
 			}
-			@media screen {
-				 html,body {
-		overflow-x: hidden;
-		width: 100%;
-		height: 100%;
-		margin: 0;
+			@media (max-width: 800px) {
+				#head-container {
+					flex-direction: column;
+					justify-content: flex-end;
+					align-items: center;
+					gap: 0px;
+					padding-top: 25px;
+				}
+			}
+			@media (max-width: 624px) {
+				html,
+				body {
+					overflow-x: hidden;
+					width: 100%;
+					height: 100%;
+					margin: 0;
 				}
 
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
+				* {
+					box-sizing: border-box;
+					margin: 0;
+					padding: 0;
 				}
 				ul {
 					margin-left: 20px;
-				}
-
-				header {
-					flex-direction: column;
-					align-items: center;
-					text-align: center;
 				}
 
 				.logo {
@@ -101,6 +100,15 @@
 					align-items: center;
 					text-align: center;
 				}
+				.LangButton {
+					min-width: 1px;
+					width: 50px;
+					font-size: 10px;
+					height: 20px;
+					padding: 5px;
+					background: linear-gradient(to right, #007bffd0, #00c8ffd4);
+				}
+
 				.logo {
 					font-size: 25px;
 				}
@@ -116,6 +124,7 @@
 				main {
 					flex-direction: column;
 					padding: 10px 30px;
+					padding-top: 60px;
 				}
 
 				.mailPage {
@@ -159,32 +168,34 @@
 	<body>
 		<div class="container">
 			<header>
-				<a href="index.html"> <div class="logo">Tuğrul Yadaş</div></a>
-				<nav>
-					<a href="MyProjects.html">
-						<button type="button" class="MenuButon">
-							<b class="translatable" data-en="MYPROJECTS">PROJELERİM</b>
-						</button>
-					</a>
-					<a href="Skills.html">
-						<button type="button" class="MenuButon">
-							<b class="translatable" data-en="SKILLS">YETENEKLERİM</b>
-						</button>
-					</a>
-					<a href="AboutMe.html">
-						<button type="button" id="AboutMeButton" class="MenuButon">
-							<b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b>
-						</button>
-					</a>
-					<a href="Contact.html">
-						<button type="button" id="CurrentPage" class="MenuButon">
-							<b class="translatable" data-en="CONTACT">İLETİŞİM</b>
-						</button>
-					</a>
-					<button type="button" onclick="toggleLanguage()" class="LangButton">
-						<b class="translatable" data-en="TR">ENG</b>
-					</button>
-				</nav>
+				<div id="head-container">
+					<a href="index.html"> <div class="logo">TuğrulYadaş</div></a>
+					<nav>
+						<a href="MyProjects.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="MYPROJECTS">PROJELERİM</b>
+							</button>
+						</a>
+						<a href="Skills.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="SKILLS">YETENEKLERİM</b>
+							</button>
+						</a>
+						<a href="AboutMe.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="ABOUTME&CV">HAKKIMDA&CV</b>
+							</button>
+						</a>
+						<a href="Contact.html">
+							<button type="button" class="MenuButon active">
+								<b class="translatable" data-en="CONTACT">İLETİŞİM</b>
+							</button>
+						</a>
+					</nav>
+				</div>
+				<button type="button" onclick="toggleLanguage()" class="LangButton">
+					<b class="translatable" data-en="TR">ENG</b>
+				</button>
 			</header>
 			<main>
 				<div class="informations">
