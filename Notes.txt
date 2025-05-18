@@ -1,6 +1,0 @@
- soulkeeper  oyun tasarımı dersi içij
- c# için fotoğraf makinesi alış satış otomasyonu
- bir cafe için tanıtım sitesi
- oyun satış takibi
- databasede otomasyon
-github linki:https://github.com/TugrulYadas/tugrulyadas.github.io
